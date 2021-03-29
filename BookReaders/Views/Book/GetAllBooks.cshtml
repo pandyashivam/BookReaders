@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BookReaders.Models.BookModel>
+@{ 
+    Layout = "_Layout";
+}
+
+       
+        <div class="container mt-xs-5 " >
+            <div class="row">
+                @foreach (var book in Model)
+                {
+                    <div class="card mt-3 mr-3" style="width: 10rem;">
+                        <img class="card-img-top" src="@book.ImageUrl" alt="image not loaded">
+                        <div class="card-body">
+                            <a href="/book/getbook/@book.Id"><h5 class="h6 ">@book.Title</h5></a>
+                            
+                            <p class="card-text font-weight-bold text-danger">&#8377 @book.Price  </p>
+                            
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+ 

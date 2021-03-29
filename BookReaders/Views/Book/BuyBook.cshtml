@@ -1,0 +1,33 @@
+﻿@using BookReaders.Models;
+@model BookModel
+@{ 
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="display-4"> Your Order For Book<span class="text-primary"> @Model.Title </span>is Successfully placed</h4>
+            </div>
+            <div class="col-md-2">
+                <img class="img-fluid" src="@Model.ImageUrl" alt="image not loaded">
+            </div>
+            <div class="col-md-8">
+                <h4 class="display-4 text-dark"> Total Price is <span class="text-danger">RS. @Model.Price</span></h4>
+            </div>
+            <div class="col-md-8">
+                <p><h6><a asp-action="GetAllBooks" asp-controller="Book">Click here</a>To continue shopping</h6></p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
